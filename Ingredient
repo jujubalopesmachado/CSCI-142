@@ -1,0 +1,23 @@
+
+public class Ingredient {
+    String IngredientName;
+    int HowMuch;
+    Ingredient (String IngredientName){
+
+        this.IngredientName = IngredientName;
+
+    }
+    public String GetIngredient(){
+
+        return IngredientName;
+    }
+    public void SetIngredient(String IngredientName){
+
+       this.IngredientName = IngredientName;
+
+    }
+
+
+
+
+}
