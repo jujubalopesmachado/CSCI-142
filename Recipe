@@ -1,0 +1,23 @@
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+public class Recipe {
+    String RecipeName;
+    LinkedList <Ingredient> MyIngredients = new LinkedList<Ingredient>();
+
+    Recipe(String RecipeName){
+
+        this.RecipeName = RecipeName;
+
+        this.MyIngredients = new LinkedList<>();
+    }
+
+    public void AddIngredients(String IngredientName){
+
+        MyIngredients.add(new Ingredient(IngredientName));
+    }
+
+
+
+}
