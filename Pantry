@@ -1,0 +1,35 @@
+import java.util.LinkedList;
+
+public class Pantry {
+    LinkedList <String> MyPantry = new LinkedList<String>();
+
+    Pantry(){
+
+        this.MyPantry =  new LinkedList<String>();
+    }
+
+    public void Add(String ItemName){
+
+        MyPantry.add(ItemName);
+
+    }
+    public void Remove (String ItemName){
+
+        MyPantry.remove(ItemName);
+    }
+
+    public void GetItem (String ItemName){
+
+        if (MyPantry.get(Integer.parseInt((ItemName))) == null){
+
+            System.out.println("You don't have this. ");
+
+        } else{
+
+            System.out.println("You have " + ItemName);
+        }
+    }
+
+
+
+}
