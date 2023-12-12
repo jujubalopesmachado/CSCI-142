@@ -1,0 +1,59 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Pantry pant1 = new Pantry();
+
+        pant1.Add("Garlic");
+        pant1.Add("Onion");
+        pant1.Add("Beef");
+        pant1.Add("Mushrooms");
+
+        Recipe rec1 = new Recipe("Beef Stroganoff");
+
+        rec1.AddIngredients("Garlic");
+        rec1.AddIngredients("Onion");
+        rec1.AddIngredients("Beef");
+        rec1.AddIngredients("Mushrooms");
+        rec1.AddIngredients("Sour Cream");
+
+        Recipe rec2 = new Recipe("Chicken Alfredo");
+        rec2.AddIngredients("Garlic");
+        rec2.AddIngredients("Onion");
+        rec2.AddIngredients("Chicken");
+
+
+        LinkedList<String> GroceryList = new LinkedList<String>();
+
+        for (int i = 0; i < rec1.MyIngredients.size(); i++) {
+
+            if (pant1.MyPantry.contains(rec1.MyIngredients.get(i).IngredientName)) {
+
+                System.out.println("You have " + rec1.MyIngredients.get(i).IngredientName);
+
+            } else {
+                System.out.println("You need to buy " + rec1.MyIngredients.get(i).IngredientName);
+
+                GroceryList.add(rec1.MyIngredients.get(i).IngredientName);
+            }
+        }
+
+        for (int i = 0; i < rec2.MyIngredients.size(); i++) {
+
+            if (pant1.MyPantry.contains(rec2.MyIngredients.get(i).IngredientName)) {
+
+                System.out.println("You have " + rec2.MyIngredients.get(i).IngredientName);
+
+            } else {
+                System.out.println("You need to buy " + rec2.MyIngredients.get(i).IngredientName);
+
+                GroceryList.add(rec2.MyIngredients.get(i).IngredientName);
+            }
+        }
+
+
+    }
+}
